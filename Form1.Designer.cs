@@ -35,17 +35,18 @@
             // lbInfo
             // 
             this.lbInfo.AutoSize = true;
-            this.lbInfo.Location = new System.Drawing.Point(94, 43);
+            this.lbInfo.Location = new System.Drawing.Point(106, 52);
             this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(202, 15);
+            this.lbInfo.Size = new System.Drawing.Size(242, 18);
             this.lbInfo.TabIndex = 0;
             this.lbInfo.Text = "如果你点到它，游戏就结束了";
             // 
             // btnMe
             // 
             this.btnMe.Location = new System.Drawing.Point(0, 0);
+            this.btnMe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMe.Name = "btnMe";
-            this.btnMe.Size = new System.Drawing.Size(176, 25);
+            this.btnMe.Size = new System.Drawing.Size(198, 30);
             this.btnMe.TabIndex = 1;
             this.btnMe.Text = "你点得到吗？";
             this.btnMe.UseVisualStyleBackColor = true;
@@ -56,16 +57,17 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(482, 453);
+            this.ClientSize = new System.Drawing.Size(542, 544);
             this.Controls.Add(this.btnMe);
             this.Controls.Add(this.lbInfo);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.MouseEnter += new System.EventHandler(this.btnMe_MouseEnter);
+            this.Text = "您的小游戏";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

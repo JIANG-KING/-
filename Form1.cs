@@ -23,20 +23,29 @@ namespace 鼠标指针
  
             Random r = new Random();
             int Left, Top;
-            Left = r.Next(0, 500);
-            Top = r.Next(0, 500);
-            while (btnMe.Location == Control.MousePosition) { Left = r.Next(0, 500); Top = r.Next(0, 500); }
-           this.Location =new  Point(Left, Top);
+            Left = r.Next(0, this.Width-btnMe.Width-5);
+            Top = r.Next(0,this.Height-btnMe.Height-5);
+            while (Top>=350) {
+                Left = r.Next(0, this.Width - btnMe.Width - 5);
+                Top = r.Next(0, this.Height - btnMe.Height - 5);
+            }
+           btnMe.Location =new  Point(Left, Top);
 
         }
         private void btnMe_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("你赢了", "提示");
             this.Close();
         }
 
         private void btnMe_MouseMove(object sender, MouseEventArgs e)
         {
             Point ms = Control.MousePosition;
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
